@@ -31,7 +31,7 @@ class Ui_MainWindow(object):
         # -------------------- options panel --------------------
 
         self.optionsPanel = QtWidgets.QGroupBox(self.centralwidget)
-        self.optionsPanel.setGeometry(QtCore.QRect(10, 0, 781, 211))
+        self.optionsPanel.setGeometry(QtCore.QRect(10, 0, 781, 251))
         self.optionsPanel.setCheckable(False)
         self.optionsPanel.setObjectName("optionsPanel")
         
@@ -195,12 +195,24 @@ class Ui_MainWindow(object):
         self.resetBandsButton.setEnabled(True)
         self.resetBandsButton.setGeometry(QtCore.QRect(560, 170, 161, 32))
         self.resetBandsButton.setObjectName("resetBandsButton")
+
+        self.refreshTableButton = QtWidgets.QPushButton(self.optionsPanel)
+        self.refreshTableButton.setEnabled(True)
+        self.refreshTableButton.setGeometry(QtCore.QRect(550, 210, 221, 32))
+        self.refreshTableButton.setStyleSheet("background-color: lightgreen; color: black;")
+        self.refreshTableButton.setObjectName("refreshTableButton")
+
+        self.progressBar = QtWidgets.QProgressBar(self.optionsPanel)
+        self.progressBar.setGeometry(QtCore.QRect(30, 220, 511, 20))
+        self.progressBar.setProperty("value", 100)
+        self.progressBar.setInvertedAppearance(False)
+        self.progressBar.setObjectName("progressBar")
         
         # -------------------------------------------------------
         # -------------------- results panel --------------------
         
         self.resultsPanel = QtWidgets.QGroupBox(self.centralwidget)
-        self.resultsPanel.setGeometry(QtCore.QRect(10, 210, 781, 341))
+        self.resultsPanel.setGeometry(QtCore.QRect(10, 250, 781, 311))
         self.resultsPanel.setObjectName("resultsPanel")
         self.resultsTable = QtWidgets.QTableWidget(self.resultsPanel)
         self.resultsTable.setEnabled(True)
@@ -255,12 +267,20 @@ class Ui_MainWindow(object):
         self.exportAllCellsButton.setEnabled(True)
         self.exportAllCellsButton.setGeometry(QtCore.QRect(260, 270, 221, 32))
         self.exportAllCellsButton.setObjectName("exportAllCellsButton")
+
+        self.helpButton = QtWidgets.QPushButton(self.resultsPanel)
+        self.helpButton.setEnabled(True)
+        self.helpButton.setGeometry(QtCore.QRect(630, 270, 141, 32))
+        self.helpButton.setStyleSheet("background-color: lightblue; color: black;")
+        self.helpButton.setDefault(False)
+        self.helpButton.setFlat(False)
+        self.helpButton.setObjectName("helpButton")
         
         # -----------------------------------------------------
         # -------------------- plots panel --------------------
         
         self.plotPanel = QtWidgets.QGroupBox(self.centralwidget)
-        self.plotPanel.setGeometry(QtCore.QRect(800, 0, 721, 551))
+        self.plotPanel.setGeometry(QtCore.QRect(800, 0, 721, 561))
         self.plotPanel.setFlat(False)
         self.plotPanel.setObjectName("plotPanel")
         self.plotViewport = QtWidgets.QGraphicsView(self.plotPanel)
@@ -356,6 +376,8 @@ class Ui_MainWindow(object):
         self.band4TextTo.setText(_translate("MainWindow", "to"))
         
         self.resetBandsButton.setText(_translate("MainWindow", "reset bands"))
+
+        self.refreshTableButton.setText(_translate("MainWindow", "refresh results table"))
         
         # -------------------------------------------------------
         # -------------------- results panel --------------------
@@ -390,6 +412,8 @@ class Ui_MainWindow(object):
         
         self.exportCellsButton.setText(_translate("MainWindow", "export data for selected cell"))
         self.exportAllCellsButton.setText(_translate("MainWindow", "export data for all cells"))
+        
+        self.helpButton.setText(_translate("MainWindow", "HELP"))
         
         # -----------------------------------------------------
         # -------------------- plots panel --------------------

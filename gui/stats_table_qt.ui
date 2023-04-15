@@ -29,7 +29,7 @@
       <x>10</x>
       <y>0</y>
       <width>781</width>
-      <height>241</height>
+      <height>251</height>
      </rect>
     </property>
     <property name="title">
@@ -617,17 +617,20 @@
       </property>
      </item>
     </widget>
-    <widget class="QPushButton" name="resetBandsButton_2">
+    <widget class="QPushButton" name="refreshTableButton">
      <property name="enabled">
       <bool>true</bool>
      </property>
      <property name="geometry">
       <rect>
-       <x>130</x>
+       <x>550</x>
        <y>210</y>
-       <width>321</width>
+       <width>221</width>
        <height>32</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: lightgreen; color: black;</string>
      </property>
      <property name="text">
       <string>refresh results table</string>
@@ -636,14 +639,17 @@
     <widget class="QProgressBar" name="progressBar">
      <property name="geometry">
       <rect>
-       <x>450</x>
-       <y>210</y>
-       <width>201</width>
-       <height>31</height>
+       <x>30</x>
+       <y>220</y>
+       <width>511</width>
+       <height>20</height>
       </rect>
      </property>
      <property name="value">
-      <number>24</number>
+      <number>100</number>
+     </property>
+     <property name="invertedAppearance">
+      <bool>false</bool>
      </property>
     </widget>
    </widget>
@@ -651,7 +657,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>240</y>
+      <y>250</y>
       <width>781</width>
       <height>311</height>
      </rect>
@@ -811,6 +817,31 @@
       <string>export data for all cells</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="helpButton">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>630</x>
+       <y>270</y>
+       <width>141</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: lightblue; color: black;</string>
+     </property>
+     <property name="text">
+      <string>HELP</string>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="plotPanel">
     <property name="geometry">
@@ -818,7 +849,7 @@
       <x>800</x>
       <y>0</y>
       <width>721</width>
-      <height>551</height>
+      <height>561</height>
      </rect>
     </property>
     <property name="title">
